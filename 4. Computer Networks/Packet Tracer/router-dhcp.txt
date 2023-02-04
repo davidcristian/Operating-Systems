@@ -1,0 +1,12 @@
+router CLI
+
+> enable
+> configure t
+> ip dhcp pool routerPool
+> network (network address) (netmask)
+> default-router (router ip)
+> dns-server (dns server ip)
+
+<ctrl z>
+
+> write memory
