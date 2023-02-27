@@ -10,7 +10,7 @@
 
 #include <iostream>
 
-#define SERVER_IP "192.168.144.128"
+#define SERVER_IP "127.0.0.1"
 #define SERVER_PORT 5555
 
 #define CONN_FAMILY AF_INET
@@ -93,6 +93,7 @@ int main()
 			return 6;
 		}
 
+		// Convert to host byte order
 		unsigned int final = ntohl(receivedNumber);
 		std::cout << "Got: " << final << std::endl;
 	}
