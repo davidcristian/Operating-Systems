@@ -177,7 +177,7 @@ segment code use32 class=code
         call [socket]                   ; socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)
         mov [sockHandle], eax           ; save handle
         cmp eax, INVALID_SOCKET         ; != INVALID_SOCKET?
-        jne socket_connect               ; true, jump to create connection
+        jne socket_connect              ; true, jump to create connection
         push dword socket_error         ; else, print error
         call [printf]                   ; printf(socket_error)
         add esp, 4                      ; clean up stack, 1 dword
